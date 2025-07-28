@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="landing" class="container">
+        <h1 class="title">Welcome to Chatroom</h1>
+        <div class="button-group">
+            <button id="createRoomBtn" class="main-btn">Create Chatroom</button>
+            <button id="joinRoomBtn" class="main-btn">Join Chatroom</button>
+        </div>
+    </div>
+
+    <div id="createRoom" class="container hidden">
+        <h2>Create a Chatroom</h2>
+        <div class="room-code-box">
+            <span>Room Code:</span>
+            <span id="roomCode" class="room-code"></span>
+        </div>
+        <button id="startChatBtn" class="main-btn">Start Chat</button>
+        <button id="backToLanding1" class="secondary-btn">Back</button>
+    </div>
+
+    <div id="joinRoom" class="container hidden">
+        <h2>Join a Chatroom</h2>
+        <input type="text" id="joinCodeInput" maxlength="8" placeholder="Enter Room Code" class="input-box" />
+        <button id="requestJoinBtn" class="main-btn">Request to Join</button>
+        <button id="backToLanding2" class="secondary-btn">Back</button>
+        <div id="joinStatus" class="status-msg"></div>
+    </div>
+
+    <div id="chatroom" class="container hidden">
+        <h2 id="chatroomTitle">Chatroom</h2>
+        <div id="userList" class="user-list"></div>
+        <div id="chatMessages" class="chat-messages"></div>
+        <div class="chat-input-group">
+            <input type="text" id="chatInput" placeholder="Type a message..." class="input-box" />
+            <button id="sendMsgBtn" class="main-btn">Send</button>
+        </div>
+        <button id="leaveRoomBtn" class="secondary-btn">Leave Room</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
